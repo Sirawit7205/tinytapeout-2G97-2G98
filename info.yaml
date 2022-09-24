@@ -6,33 +6,34 @@
 #
 # This will be automatically collected and used to make a datasheet for the chip.
 project: 
-  author:       ""      # Your name
-  title:        ""      # Project title
-  description:  ""      # Short description of what your project does
-  how_it_works: ""      # Longer description of how the project works
-  how_to_test:  ""      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
+  author:       "Sirawit Lappisatepun"
+  title:        "Logic-2G97-2G98"
+  description:  "Replication of TI's Little Logic 1G97 and 1G98 configurable logic gates."
+  how_it_works: "This design replicates the circuit inside a TI configurable logic gates 74xx1G97 (and by including an inverted output, it will work as a 74xx1G98 as well). 
+                 Since there are still I/O pins left, I included two of these configurables, and also one 74xx1G79 D Flip-Flop (again, an inverted output means this will also work as a 74xx1G80)."
+  how_to_test:  "You could refer to TI's 1G79/1G80/1G97/1G98 datasheet to test the device according to the pinout listed below."
   external_hw:  ""      # Describe any external hardware needed
   doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
   clock_hz:     0       # Clock frequency in Hz (if required)
   language:     "wokwi" # other examples include Verilog, Amaranth, VHDL, etc
-  wokwi_id:     0       # the wokwi ID
+  wokwi_id:     341432030163108435
   picture:      ""      # relative path to a picture in your repository
   inputs:               # a description of what the inputs do
-    - clock
-    - reset
+    - dff_clock
+    - dff_data
+    - gate1_in0
+    - gate1_in1
+    - gate1_in2
+    - gate2_in0
+    - gate2_in1
+    - gate2_in2
+  outputs:              # a description of what the outputs do
+    - dff_out
+    - dff_out_bar
+    - gate1_out
+    - gate1_out_bar
+    - gate2_out
+    - gate2_out_bar
     - none
-    - none
-    - none
-    - none
-    - none
-    - none
-  outputs:
-    - segment a         # a description of what the outputs do
-    - segment b
-    - segment c
-    - segment d
-    - segment e
-    - segment f
-    - segment g
     - none
 
